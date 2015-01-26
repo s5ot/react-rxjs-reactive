@@ -8,7 +8,7 @@ var PhoneItem = React.createClass({
   render: function() {
     return (
       <li className="thumbnail" key={this.props.id}>
-        <a href='#' className='thumb'><img className='thumb' src={'http://localhost:8000/' + this.props.imageUrl}/></a>
+        <Link to='phoneitem' params={this.props}><img className='thumb' src={'http://localhost:8000/' + this.props.imageUrl}/></Link>
         <Link to='phoneitem' params={this.props}>{this.props.name}</Link>
         <p>{this.props.snippet}</p>
       </li>
